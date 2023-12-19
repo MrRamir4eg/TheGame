@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.kpfu.itis.kashshapov.controllers.GameScreenController">
+    <children>
+        <Label fx:id="me" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="500"/>
+        <Label fx:id="friend" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="300"/>
+        <Label fx:id="enemy" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="700"/>
+        <ImageView fx:id="afk" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="400" fitHeight="50" fitWidth="50"/>
+        <ImageView fx:id="navigate" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="450" fitHeight="50" fitWidth="50"/>
+        <ImageView fx:id="stealCards" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="500" fitHeight="50" fitWidth="50"/>
+        <ImageView fx:id="swap" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="550" fitHeight="50" fitWidth="50"/>
+        <ImageView fx:id="shketUlt" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="400" fitHeight="50" fitWidth="50"/>
+
+        <AnchorPane fx:id="charContainer1" prefHeight="320" prefWidth="200.0" style="-fx-border-color: grey"
+                    AnchorPane.topAnchor="200" AnchorPane.rightAnchor="10">
+            <children>
+                <ImageView fx:id="charView1" fitHeight="300" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                <ImageView fx:id="charFight1" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="40"/>
+                <ImageView fx:id="charNav1" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="20"/>
+                <Label fx:id="charHp1" text="ХП: n" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                <Label fx:id="charCardCount1" text="Карты: " AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="45"/>
+                <MenuButton fx:id="active1" mnemonicParsing="false" text="Активки" AnchorPane.bottomAnchor="0"
+                            AnchorPane.leftAnchor="0"/>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="charContainer2" prefHeight="320" prefWidth="200.0" style="-fx-border-color: grey"
+                    AnchorPane.topAnchor="200" AnchorPane.rightAnchor="220">
+            <children>
+                <ImageView fx:id="charView2" fitHeight="300" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                <ImageView fx:id="charFight2" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="40"/>
+                <ImageView fx:id="charNav2" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="20"/>
+                <Label fx:id="charHp2" text="ХП: n" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                <Label fx:id="charCardCount2" text="Карты: " AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="45"/>
+                <MenuButton fx:id="active2" mnemonicParsing="false" text="Активки" AnchorPane.bottomAnchor="0"
+                            AnchorPane.leftAnchor="0"/>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="charContainer3" prefHeight="320" prefWidth="200.0" style="-fx-border-color: grey"
+                    AnchorPane.topAnchor="200" AnchorPane.rightAnchor="430">
+            <children>
+                <ImageView fx:id="charView3" fitHeight="300" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                <ImageView fx:id="charFight3" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="40"/>
+                <ImageView fx:id="charNav3" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="20"/>
+                <Label fx:id="charHp3" text="ХП: n" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                <Label fx:id="charCardCount3" text="Карты: " AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="45"/>
+                <MenuButton fx:id="active3" mnemonicParsing="false" text="Активки" AnchorPane.bottomAnchor="0"
+                            AnchorPane.leftAnchor="0"/>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="charContainer4" prefHeight="320" prefWidth="200.0" style="-fx-border-color: grey"
+                    AnchorPane.topAnchor="200" AnchorPane.rightAnchor="640">
+            <children>
+                <ImageView fx:id="charView4" fitHeight="300" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                <ImageView fx:id="charFight4" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="40"/>
+                <ImageView fx:id="charNav4" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="20"/>
+                <Label fx:id="charHp4" text="ХП: n" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                <Label fx:id="charCardCount4" text="Карты: " AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="45"/>
+                <MenuButton fx:id="active4" mnemonicParsing="false" text="Активки" AnchorPane.bottomAnchor="0"
+                            AnchorPane.leftAnchor="0"/>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="charContainer5" prefHeight="320" prefWidth="200.0" style="-fx-border-color: grey"
+                    AnchorPane.topAnchor="200" AnchorPane.rightAnchor="850">
+            <children>
+                <ImageView fx:id="charView5" fitHeight="300" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                <ImageView fx:id="charFight5" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="40"/>
+                <ImageView fx:id="charNav5" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="20"/>
+                <Label fx:id="charHp5" text="ХП: n" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                <Label fx:id="charCardCount5" text="Карты: " AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="45"/>
+                <MenuButton fx:id="active5" mnemonicParsing="false" text="Активки" AnchorPane.bottomAnchor="0"
+                            AnchorPane.leftAnchor="0"/>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane fx:id="charContainer6" prefHeight="320" prefWidth="200.0" style="-fx-border-color: grey"
+                    AnchorPane.topAnchor="200" AnchorPane.rightAnchor="1060">
+            <children>
+                <ImageView fx:id="charView6" fitHeight="300" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                <ImageView fx:id="charFight6" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="40"/>
+                <ImageView fx:id="charNav6" fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true"
+                           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="20"/>
+                <Label fx:id="charHp6" text="ХП: n" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                <Label fx:id="charCardCount6" text="Карты: " AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="45"/>
+                <MenuButton fx:id="active6" mnemonicParsing="false" text="Активки" AnchorPane.bottomAnchor="0"
+                            AnchorPane.leftAnchor="0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

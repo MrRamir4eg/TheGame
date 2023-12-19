@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kpfu.itis.kashshapov.controllers.GameController">
+    <children>
+        <Button text="Создать лобби" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="350" AnchorPane.rightAnchor="350"
+                prefWidth="10" fx:id="createLobbyButton"/>
+        <Button text="Присоединиться" AnchorPane.topAnchor="200" AnchorPane.leftAnchor="350"
+                AnchorPane.rightAnchor="350" prefWidth="10" fx:id="joinLobbyButton"/>
+        <Hyperlink contentDisplay="CENTER" text="Правила" AnchorPane.topAnchor="300" AnchorPane.leftAnchor="450"
+                   AnchorPane.rightAnchor="450" prefWidth="10" fx:id="rulesHyperlink"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.kpfu.itis.kashshapov.controllers.CreateController"
+            prefHeight="540" prefWidth="960">
+    <children>
+        <Label text="username" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="50.0"/>
+        <TextField fx:id="username" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="70.0"/>
+        <Label text="host" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="100.0"/>
+        <TextField fx:id="host" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="120.0"/>
+        <Label text="port" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="150.0"/>
+        <TextField fx:id="port" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="170.0"/>
+        <Button fx:id="createButton" mnemonicParsing="false" text="Создать" AnchorPane.leftAnchor="470.0"
+                AnchorPane.topAnchor="200.0"/>
+        <Button fx:id="joinGameButton" mnemonicParsing="false" text="Начать" AnchorPane.bottomAnchor="100" AnchorPane.leftAnchor="470" visible="false"/>
+        <Label fx:id="errorLabel" AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="400" AnchorPane.leftAnchor="400"
+               textAlignment="CENTER"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="540" prefWidth="960" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kpfu.itis.kashshapov.controllers.JoinController">
+    <children>
+        <Label text="username" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="50.0"/>
+        <TextField fx:id="username" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="70.0"/>
+        <Label text="host" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="100.0"/>
+        <TextField fx:id="host" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="120.0"/>
+        <Label text="port" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="150.0"/>
+        <TextField fx:id="port" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="170.0"/>
+        <Button fx:id="joinButton" mnemonicParsing="false" text="Присоединиться" AnchorPane.leftAnchor="445.0"
+                AnchorPane.topAnchor="200.0"/>
+        <Label fx:id="errorLabel" AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="400" AnchorPane.leftAnchor="400" textAlignment="CENTER"/>
+    </children>
+</AnchorPane>
