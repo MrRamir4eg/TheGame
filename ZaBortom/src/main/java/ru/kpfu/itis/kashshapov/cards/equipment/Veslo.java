@@ -16,7 +16,6 @@ public class Veslo extends EquipmentCard {
     @Override
     public boolean useInTurn(GameServer serverInfo, GameCharacter character) {
         Collections.shuffle(NavigationCard.getDeck());
-        serverInfo.getChoice().add(NavigationCard.getDeck().get(0));
         return true;
     }
 

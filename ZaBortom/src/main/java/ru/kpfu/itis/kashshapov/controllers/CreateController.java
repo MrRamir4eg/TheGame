@@ -1,6 +1,7 @@
 package ru.kpfu.itis.kashshapov.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
@@ -9,6 +10,8 @@ import ru.kpfu.itis.kashshapov.client.Client;
 import ru.kpfu.itis.kashshapov.context.ApplicationContext;
 import ru.kpfu.itis.kashshapov.enums.Phase;
 import ru.kpfu.itis.kashshapov.server.GameServer;
+
+import java.io.IOException;
 
 public class CreateController {
     @FXML
@@ -40,9 +43,13 @@ public class CreateController {
         });
 
         joinGameButton.setOnAction(actionEvent -> {
-            GameApplication.getGameApplication()
-                    .getStage()
-                    .setScene(ApplicationContext.getGameScene());
+            try {
+                GameApplication.getGameApplication()
+                        .getStage()
+                        .setScene(new Scene(ApplicationContext.getGameScene().load()));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             GameServer.getTheServer().setCurrentPhase(Phase.INIT);
         });
     }

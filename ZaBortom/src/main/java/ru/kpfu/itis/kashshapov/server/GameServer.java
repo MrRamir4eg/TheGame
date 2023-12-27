@@ -42,13 +42,14 @@ public class GameServer extends Thread {
             this.port = port;
             server = new DatagramSocket(port);
             players = new HashSet<>();
+            characters = new ArrayList<>();
             characters.add(GameCharacter.MILADY);
             characters.add(GameCharacter.SNOB);
             characters.add(GameCharacter.CAPTAIN);
             characters.add(GameCharacter.BOZMAN);
             characters.add(GameCharacter.CHERPAK);
             characters.add(GameCharacter.SHKET);
-            objectInput = new ObjectInputStream(inputStream);
+            inputStream = new ByteArrayInputStream(buffer);
             this.setDaemon(true);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -71,6 +72,15 @@ public class GameServer extends Thread {
                     }
                 }
             } else {
+                buffer[0] = 0;
+                for (Client i : players) {
+                    DatagramPacket packet = new DatagramPacket(buffer, buffer.length, i.getAddress(), i.getPort());
+                    try {
+                        server.send(packet);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
                 switch (currentPhase) {
                     case INIT -> {
                         if (seagullCount == 4) {
@@ -227,5 +237,9 @@ public class GameServer extends Thread {
         equipmentCards.add(new Krug());
         equipmentCards.add(new SharkTrap());
         equipmentCards.add(new Zontik());
+    }
+
+    public NavigationCard getChoice() {
+        return choice;
     }
 }

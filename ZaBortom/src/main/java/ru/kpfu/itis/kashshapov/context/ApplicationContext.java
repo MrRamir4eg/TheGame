@@ -9,15 +9,15 @@ import java.net.URL;
 
 public class ApplicationContext {
 
-    private static Scene joinScene;
-    private static Scene createScene;
-    private static Scene gameScene;
+    private static FXMLLoader joinScene;
+    private static FXMLLoader createScene;
+    private static FXMLLoader gameScene;
 
     static {
         try {
-            joinScene = new Scene(new FXMLLoader(ApplicationContext.getGameResourceURL("join.fxml")).load());
-            createScene = new Scene(new FXMLLoader(ApplicationContext.getGameResourceURL("create.fxml")).load());
-            gameScene = new Scene(new FXMLLoader(ApplicationContext.getGameResourceURL("game-screen.fxml")).load());
+            joinScene = new FXMLLoader(ApplicationContext.getGameResourceURL("join.fxml")).load();
+            createScene = new FXMLLoader(ApplicationContext.getGameResourceURL("create.fxml")).load();
+            gameScene = new FXMLLoader(ApplicationContext.getGameResourceURL("game-screen.fxml")).load();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -31,15 +31,15 @@ public class ApplicationContext {
         return GameApplication.class.getResource(path);
     }
 
-    public static Scene getJoinScene() {
+    public static FXMLLoader getJoinScene() {
         return joinScene;
     }
 
-    public static Scene getCreateScene() {
+    public static FXMLLoader getCreateScene() {
         return createScene;
     }
 
-    public static Scene getGameScene() {
+    public static FXMLLoader getGameScene() {
         return gameScene;
     }
 }

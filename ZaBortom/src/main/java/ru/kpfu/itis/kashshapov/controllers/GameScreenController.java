@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class GameScreenController {
+
+    private static GameScreenController controller;
     @FXML
     private ImageView shketUlt;
     @FXML
@@ -137,6 +139,8 @@ public class GameScreenController {
     private Button check;
 
     public void initialize() {
+        controller = this;
+
         charContainers.add(charContainer1);
         charContainers.add(charContainer2);
         charContainers.add(charContainer3);
@@ -205,12 +209,6 @@ public class GameScreenController {
         characters.add(GameCharacter.CHERPAK);
         characters.add(GameCharacter.SHKET);
 
-        check.setOnAction(actionEvent -> {
-            characters.get(0).getActiveDeck().add(new Water());
-            characters.get(0).setHp(characters.get(0).getHp() + 1);
-            updateView(characters);
-        });
-
         shketUlt.setImage(new Image(ApplicationContext.getGameResource("images/status/shket_ult.png")));
         swap.setImage(new Image(ApplicationContext.getGameResource("images/status/swap.jpg")));
         stealCards.setImage(new Image(ApplicationContext.getGameResource("images/status/card.jpg")));
@@ -220,11 +218,9 @@ public class GameScreenController {
         me.setText(Client.getTheClient().getCharacter().getName());
         enemy.setText(Client.getTheClient().getCharacter().getEnemy().getName());
         friend.setText(Client.getTheClient().getCharacter().getFriend().getName());
-
-        updateView(characters);
     }
 
-    private void updateView(List<GameCharacter> characters) {
+    public void updateView(List<GameCharacter> characters) {
         for (int i = 0; i < characters.size(); i++) {
             GameCharacter c = characters.get(i);
             charViews.get(i).setImage(new Image(ApplicationContext.getGameResource(c.getImageLocation())));
@@ -241,5 +237,17 @@ public class GameScreenController {
                         return new MenuItem("", view);
                     }).collect(Collectors.toSet()));
         }
+    }
+
+    public static GameScreenController getController() {
+        return controller;
+    }
+
+    public List<GameCharacter> getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(List<GameCharacter> characters) {
+        this.characters = characters;
     }
 }
